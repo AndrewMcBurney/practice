@@ -25,9 +25,9 @@ def search_for_value(grid, key, m, n):
     """
     if key == grid[m][n]:
         return True
-    elif m == len(grid) and n == 0:
+    elif m == len(grid) - 1 and n == 0:
         return False
-    elif key > grid[m][n] and not m == len(grid):
+    elif key > grid[m][n] and not m == len(grid) - 1:
         # Move down one position
         return search_for_value(grid, key, m + 1, n)
     elif key < grid[m][n] and not n == 0:
@@ -45,7 +45,7 @@ grid = [
     [10, 12, 18]
 ]
 
-print( search_for_value(grid, 4, 0, len(grid)) )
+print( search_for_value(grid, 4, 0, len(grid) - 1) )
 # => True
-print( search_for_value(grid, 27, 0, len(grid)) )
+print( search_for_value(grid, 27, 0, len(grid) - 1) )
 # => False
