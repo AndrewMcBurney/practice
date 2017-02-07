@@ -37,8 +37,10 @@ s"Power of 2: ${math.pow(2, 2)}"                      // => "Power of 2: 4"
 ## Type inference
 In scala, you do not always need to specify a type due to type inference which can often infer the type of the variable.
 
-
 ## Tail Recursion
 - In java7, each call is a new stack frame (local variables stored here) pushed on to the call stack -> can cause stack overflow?
 - In scala, if you use tail recursion, the compiler can optimize by not creating a new stack frame because it knows it doesn't need the local context (tail recurison optimization)
 
+## Closures
+- 'close-over' free variables from an outer function.
+- functions + state
