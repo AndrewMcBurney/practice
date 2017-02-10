@@ -1,4 +1,4 @@
-object Solution {
+object PlusMinus {
   def getCount(pos: Int, neg: Int, zero: Int, arr: Array[Int], n: Int): (Int, Int, Int, Array[Int], Int) = {
     if (n < 0) return (pos, neg, zero, arr, n)
 

@@ -5,7 +5,7 @@
   * @note:   Rotates an array left k times. HackerRank - Data Structures Question
   */
 
-object Solution {
+object LeftRotation {
   // O(k) time-complexity
   def left_rotate(arr: Array[Int], num_rotations: Int): Array[Int] =
     if (num_rotations == 0) arr

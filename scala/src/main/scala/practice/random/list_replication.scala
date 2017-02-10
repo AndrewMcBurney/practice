@@ -2,7 +2,7 @@
   * @author: Andrew McBurney
   */
 
-object Solution {
+object ListReplication {
   def f(num: Int, arr: List[Int]): List[Int] = {
     def g(it: Int, arr: List[Int], sol: List[Int]): (Int, List[Int], List[Int]) = {
       if (it == 0) return (0, arr, sol)
