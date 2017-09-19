@@ -19,16 +19,13 @@ class PalindromeChecker
   def palindrome?
     return true if str.size == 1
     median = str.size / 2
-
-    if str.size.odd?
-      compare(median - 1, median + 1)
-    else
-      compare(median - 1, median)
-    end
+    str.size.odd? ? compare(median - 1, median + 1) : compare(median - 1, median)
   end
 
   private
 
+  # Compare indices of string array recursively to check if a given string is a
+  # palindrome
   def compare(lower, upper)
     return true  if lower.zero? && str[lower] == str[upper]
     return false if str[lower] != str[upper]
