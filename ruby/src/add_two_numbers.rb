@@ -36,6 +36,6 @@ end
 # @return [Integer[]]
 def list_values(node, list = [])
   new_list = list.push(node.val)
-  return new_list if node.next.nil?
+  return new_list.reverse if node.next.nil?
   list_values(node.next, new_list)
 end

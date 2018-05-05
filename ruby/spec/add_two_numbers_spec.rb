@@ -33,4 +33,21 @@ describe "add_two_numbers" do
     expect(returned_node.next.next.val).to be(8)
     expect(returned_node.next.next.next).to be_nil
   end
+
+  it "works for another test case" do
+    # List 1: 1 -> 8
+    a = ListNode.new(1)
+    b = ListNode.new(8)
+    a.next = b
+
+    # List 2: 0
+    c = ListNode.new(0)
+
+    returned_node = add_two_numbers(a, c)
+
+    # Expectations
+    expect(returned_node.val).to be(1)
+    expect(returned_node.next.val).to be(8)
+    expect(returned_node.next.next).to be_nil
+  end
 end
