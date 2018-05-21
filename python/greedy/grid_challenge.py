@@ -6,7 +6,6 @@ grid_challenge.py
 """
 
 import sys
-import fileinput
 
 
 def check_rearrange_possible(grid, n):
